@@ -42,7 +42,8 @@ function CacheBuster({
 
   const checkCacheStatus = useCallback(async () => {
     try {
-      const res = await fetch(`${getMetaFileDirectory()}/meta.json?${Date.now()}`);
+      console.log("CIAO");
+      const res = await fetch(`${getMetaFileDirectory()}/meta.json?`);
       const { version: metaVersion } = await res.json();
 
       const shouldForceRefresh = isThereNewVersion(metaVersion, currentVersion);
