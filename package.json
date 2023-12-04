@@ -20,7 +20,7 @@
   "scripts": {
     "build": "yarn buildTypes && microbundle-crl --no-compress --no-sourcemap --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --no-sourcemap --format modern,cjs",
-    "prepare": "run-s build",
+    "prepare": "npm run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
@@ -56,8 +56,11 @@
     "react-scripts": "^4.0.3"
   },
   "files": [
-    "dist"
-  ],
+    "dist",
+    "LICENSE",
+    "package.json",
+    "README.md"
+     ],
   "dependencies": {
     "compare-versions": "^4.1.2"
   }
